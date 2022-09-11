@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -24,6 +28,15 @@ a {
     background: black;
   }
 } */
+@layer components{
+  .site-container {
+      @apply max-w-2xl mx-auto px-4
+  }
+
+  .site-4xl-container{
+      @apply max-w-4xl mx-auto px-2
+  }
+}
 
 .container {
   max-width: 650px;
