@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from "react-markdown";
 
-
-export default function Home({ posts }) {
+export default function BlogPost({ post }) {
+  console.log(post);
   return (
     <div className="container">
       <Head>
@@ -13,22 +13,21 @@ export default function Home({ posts }) {
       </Head>
 
       <div className="hero">
-        <h1 className="hero-title">Enis Uzan</h1>
-        <div className="hero-social-links">
+        <h1>Enis Uzan</h1>
+        <div>
           <Link href="https://twitter.com/uzanenis">
-            <a className="social-link">Twitter</a>
+            <a>Twitter</a>
           </Link>
 
           <Link href="https://www.linkedin.com/in/enisuzan/">
-            <a className="social-link">LinkedIn</a>
+            <a>LinkedIn</a>
           </Link>
         </div>
       </div>
-      
-      {posts.map((post) => (
-        <div className="blog">
+
+      <div className="blog">
         <h2 className="blog-title">
-          <Link href={post.slug}>
+          <Link href="/test">
             <a className="blog-title-link">{post.title}</a>
           </Link>
         </h2>
@@ -37,18 +36,14 @@ export default function Home({ posts }) {
         </div>
         <div className="blog-date">{post.date}</div>
       </div>
-      ))}
 
       <footer></footer>
-      <style jsx>{``}</style>
     </div>
   );
-
-  
 }
 
-Home.getInitialProps = async () => {
-  const res = await fetch('http://localhost:3000/api/posts')
-  const json = await res.json()
-  return { posts: json.posts }
-}
+BlogPost.getInitialProps = async ({ req, query }) => {
+  const res = await fetch(`http://localhost:3000/api/post/${query.postId}`);
+  const json = await res.json();
+  return { post: json.post };
+};
