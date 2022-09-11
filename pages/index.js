@@ -26,7 +26,7 @@ export default function Home({ posts }) {
       </div>
       
       {posts.map((post) => (
-        <div className="blog">
+        <div className="blog" key={post.slug}>
         <h2 className="blog-title">
           <Link href={post.slug}>
             <a className="blog-title-link">{post.title}</a>
@@ -47,7 +47,7 @@ export default function Home({ posts }) {
   
 }
 
-Home.getInitialProps = async () => {
+Home.getInitialProps = async ({query}) => {
   const res = await fetch('http://localhost:3000/api/posts')
   const json = await res.json()
   return { posts: json.posts }
