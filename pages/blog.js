@@ -8,8 +8,8 @@ export default function BlogPage({ posts }) {
     <div className="site-container">
       
       
-      {posts.map((post) => (
-        <div className="blog" key={post.slug}>
+      {posts.map((post,idx) => (
+        <div className="blog" key={idx}>
         <h2 className="blog-title">
           <Link href={post.slug}>
             <a className="blog-title-link">{post.title}</a>
@@ -23,7 +23,7 @@ export default function BlogPage({ posts }) {
       ))}
 
       <footer></footer>
-      <style jsx>{``}</style>
+      
     </div>
   );
 
