@@ -31,8 +31,8 @@ export default function BlogPage({ posts }) {
 }
 
 BlogPage.getInitialProps = async ({query}) => {
-  //const res = await fetch('http://enisuzan-dev.vercel.app/api/posts')
-  const res = await fetch('http://localhost:3000/api/posts')
+  const res = await fetch('http://enisuzan-dev.vercel.app/api/posts')
+  //const res = await fetch('http://localhost:3000/api/posts')
   const json = await res.json()
   return { posts: json.posts }
 }

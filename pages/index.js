@@ -1,7 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import ReactMarkdown from 'react-markdown'
-
 
 export default function Home({ posts }) {
   return (
@@ -12,44 +10,51 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="">
-      <div className="space-y-4">
-          <h1 className="text-2xl font-bold">
-            Merhaba, Ben Enis Uzan. Üniversite öğrencisi bir Front End
-            Developer'ım.
-          </h1>
+      <div className="container-01">
+        <h3 className="c-title-01">Merhaba, Ben Enis Uzan.</h3>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A eos illum
-            minima quae, reiciendis nam et, ratione blanditiis minus odit culpa
-            suscipit incidunt expedita aliquid eligendi inventore rerum at
-            temporibus.
-          </p>
+        <h3 className="c-title-02">
+          Biraz öğrenci biraz da{" "}
+          <span className="animate-rainbow">Front End Developer.</span>
+        </h3>
 
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
-            vel, tempora adipisci nemo porro nulla quaerat in numquam sed
-            debitis quidem hic cum, sapiente sit mollitia, exercitationem a quod
-            fuga.
-          </p>
-        </div>
-        <div className="hero-social-links">
+        <p className="">
+          Şu anda <Link href="http://feux.digital/">
+            <a target="_blank" className="inside-social-link">Feux</a>
+          </Link> şirketinde Front End Developer olarak çalışıyorum.
+          
+        </p>
+
+        <p>
+          Güncel olarak React, Javascript ve Sass kullanıyorum.
+        </p>
+      </div>
+
+      <footer>
+        <div className="social-links space-x-2">
+        <Link href="mailto:uzanenis@outlook.com">
+            <a target="_blank" className="social-link">E-Mail</a>
+          </Link>
+
           <Link href="https://twitter.com/uzanenis">
-            <a className="social-link">Twitter</a>
+            <a target="_blank" className="social-link sc-twitter"></a>
+          </Link>
+
+          <Link href="https://github.com/uzanenis">
+            <a target="_blank" className="social-link sc-github"></a>
           </Link>
 
           <Link href="https://www.linkedin.com/in/enisuzan/">
-            <a className="social-link">LinkedIn</a>
+            <a target="_blank" className="social-link sc-linkedin"></a>
+          </Link>
+
+          <Link href="https://www.instagram.com/uzanenis">
+            <a target="_blank" className="social-link sc-instagram">
+              
+            </a>
           </Link>
         </div>
-      </div>
-      
-      
-
-      <footer></footer>
-      <style jsx>{``}</style>
+      </footer>
     </div>
   );
-
-  
 }
