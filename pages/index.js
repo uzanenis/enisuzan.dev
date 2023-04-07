@@ -18,9 +18,9 @@ export default function Home({ posts }) {
           <span className="animate-rainbow">Front End Developer.</span>
         </h3>
 
-        <p className="">
-          Şu anda <Link href="http://feux.digital/">
-            <a target="_blank" className="inside-social-link">Feux</a>
+        <p className="test-xl">
+          Şu anda <Link href="https://www.akinon.com/">
+            <a target="_blank" className="inside-social-link">Akinon</a>
           </Link> şirketinde Front End Developer olarak çalışıyorum.
           
         </p>

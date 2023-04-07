@@ -42,7 +42,7 @@ a {
 .container-01 .c-title-01 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 28px;
 }
 
@@ -50,12 +50,12 @@ a {
   margin-bottom: 24px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: 28px;
+  font-size: 1.5rem;
 }
 
 .inside-social-link {
   text-decoration: underline !important;
-  color: #C2C0A6;
+  color: #c2c0a6;
 }
 
 /*Footer*/
@@ -90,7 +90,7 @@ a {
   background-image: url(../src/linkedin-logo.svg);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 28px 28px;
+  background-size: 26px 26px;
 }
 
 .sc-github {
@@ -99,7 +99,7 @@ a {
   background-image: url(../src/github-logo.svg);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 32px 32px;
+  background-size: 26px 26px;
 }
 
 .sc-twitter {
@@ -108,7 +108,7 @@ a {
   background-image: url(../src/twitter-logo.svg);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 28px 28px;
+  background-size: 26px 26px;
 }
 
 /*End: Footer*/
